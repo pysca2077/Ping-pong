@@ -26,16 +26,28 @@ class Player(Game_Sprate):
 main_win = display.set_mode((700, 500))
 main_win.fill((39, 10, 31))
 clock = time.Clock()
-ref_orb = Game_Sprate('refresher.png', 350, 200, 4, 100,100 )
+ref_orb = Game_Sprate('refresher.png', 350, 200, 4, 75,75 )
+
+speed_x = 3
+speed_y = 3
 
 game = True
 finish = False
 while game:
+
+    main_win.fill((39, 10, 31))
+
     for e in event.get():
         if e.type == QUIT:
             game = False
 
     if finish != True:
+        ref_orb.rect.x += speed_x
+        ref_orb.rect.y += speed_y
+
+        if ref_orb.rect.y < 0 or ref_orb.rect.y >425:
+            speed_y *= -1
+
         ref_orb.reset()
         ref_orb.update()
 
