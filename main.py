@@ -25,8 +25,8 @@ class Player(Game_Sprate):
         if keys_pressed[K_DOWN] and self.rect.y < 430:
             self.rect.y += self.speed
 
-rocket1 = Player('refresher.png', 20, 100, 5, 50, 150)
-rocket2 = Player('refresher.png', 630, 100, 5, 50, 150)
+rocket1 = Player('isha.jpg', 20, 100, 5, 50, 150)
+rocket2 = Player('aeges.jpg', 630, 100, 5, 50, 150)
 
 main_win = display.set_mode((700, 500))
 main_win.fill((39, 10, 31))
@@ -39,7 +39,7 @@ lose_1_igrok = font.render('lose_1_igrok', True, (31,58, 61))
 lose_2_igrok = font.render('lose_2_igrok', True, (31, 58, 61))
 
 speed_x = 3
-speed_y = 3
+speed_y  =3
 
 game = True
 finish = False
